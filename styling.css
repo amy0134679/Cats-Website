@@ -1,11 +1,16 @@
 body {
-  background-color: rgb(253, 251, 236);
+  background-color: rgb(255, 255, 255);
 }
 .grid-test {
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #7559f3;
+    column-gap: 50px;
+    grid-auto-columns: 200px;
+    row-gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgb(253, 251, 236);
     padding: 30px;
+
+}
     
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
@@ -15,7 +20,7 @@ body {
     text-align: center;
     }
  
-  }
+  
 h1 {
   color: #4f370a;
   font-size: 50px;
