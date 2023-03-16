@@ -3,12 +3,34 @@ body {
 }
 
 .navbar {
-    background-color: #47d3e6;
+    background-color: #4f370a;
     overflow: hidden;
-    font-size: xx-large;
+    font-size: 60px;
+    padding: 30px;
+  }
+
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    font-family: 'Franklin Gothic Extra-Light', 'Arial Narrow';
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 40px;
+  }
+
+.navbar a:hover {
+    background-color: #ffd0d1;
+    color: #4f370a;
+  }
+  
+  .navbar a.active {
+    background-color: #fec9ca;
+    color: #4f370a
   }
 
 .row {
+    margin: 70px;
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
@@ -20,62 +42,29 @@ body {
   }
   
   .column img {
+    border: 5px solid, bisque;
+    background: #fec9ca;
+    padding: 15px 15px;
     margin-top: 30px;
-    vertical-align: middle;
     border-radius: 50px;
+
   }
 
-
-
-/*
- 
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 20px;
-    border-radius: 30px;
-  }
-
-.column2 {
-    float: left;
-    width: 50%;
-    padding: 20px;
-    border-radius: 30px;
-  }
-
-
-
-.grid-test {
-    display: grid;
-    column-gap: 50px;
-    grid-auto-columns: 200px;
-    row-gap: 20px;
-    grid-template-columns: auto auto auto auto;
-    background-color: rgb(253, 251, 236);
-    padding: 30px;
-
-}
-    
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    }
- */
-  
 h1 {
-  color: #4f370a;
-  font-size: 50px;
-  text-align: center;
-  background-color: bisque;
-  padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+    color: #4f370a;
+    font-size: 80px;
+    text-align: center;
+    background-color: bisque;
+    padding: 100px;
 }
 
 
 
 p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 45px;
+  padding-left: 50px;
+  color: #4f370a;
+  
 }
