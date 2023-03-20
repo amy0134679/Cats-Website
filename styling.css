@@ -5,8 +5,8 @@ body {
 .navbar {
     background-color: #4f370a;
     overflow: hidden;
-    font-size: 60px;
-    padding: 30px;
+    font-size: 30px;
+    padding: 15px;
   }
 
   .navbar a {
@@ -14,9 +14,9 @@ body {
     color: #f2f2f2;
     font-family: 'Franklin Gothic Extra-Light', 'Arial Narrow';
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 20px;
   }
 
 .navbar a:hover {
@@ -30,7 +30,7 @@ body {
   }
 
 .row {
-    margin: 70px;
+    margin: 35px;
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
@@ -38,33 +38,34 @@ body {
   
   .column {
     flex: 20%;
-    padding: 30px;
+    padding: 15px;
   }
   
   .column img {
-    border: 5px solid, bisque;
+    border: 10px solid, bisque;
     background: #fec9ca;
-    padding: 15px 15px;
-    margin-top: 30px;
-    border-radius: 50px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    border-radius: 25px;
 
   }
 
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
     color: #4f370a;
-    font-size: 80px;
+    font-size: 40px;
     text-align: center;
     background-color: bisque;
-    padding: 100px;
+    border: 65px solid, #4f370a;
+    padding: 25px;
 }
 
 
 
 p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 45px;
-  padding-left: 50px;
+  font-size: 23px;
+  padding-left: 25px;
   color: #4f370a;
   
 }

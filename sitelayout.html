@@ -12,8 +12,8 @@
 
         <div class="navbar">
             <a class="active" href="Cat Gallery">Cat Gallery</a>
-            <a href="I love surprises"></a>
             <a href="">"Random Cat"</a>
+            <button class="tab" onclick="pages(event, 'Dogs To Hate On')">Dogs</button>
             <a href="SUPRISE ME!">I love surprises</a>
         </div>
         
@@ -39,34 +39,26 @@
 
         </div>
 
-
-       <!-- <div class="row"> 
-            <div class="column">
-                <img src="https://i.pinimg.com/originals/04/fa/43/04fa43697705cdbdab9e945be7a3a8c4.jpg" alt="smirkingcat" style="width: 75%">
-                <img src="https://i.pinimg.com/564x/0c/75/4a/0c754a45e51b6cb6b838580ef68e45cd.jpg" alt="birthdaycat" style="width:75%">
-            </div>
-
-            <div class="column"></div>
-                <img src="https://i.pinimg.com/564x/07/de/fc/07defc230c2b3930addb80d52cacc284.jpg" alt="shockedcat" style="width:75%">
-                <img src="https://i.pinimg.com/564x/b1/f1/c7/b1f1c72f5648762062284eb2322b7960.jpg" alt="birthdaycat" style="width:75%">
-            </div>
-        
-
-        <div class="grid-test">
-            <div class="grid-item"><img src="https://i.pinimg.com/564x/0c/75/4a/0c754a45e51b6cb6b838580ef68e45cd.jpg" alt="birthdaycat"></div>
-            <div class="grid-item"><img src="https://i.pinimg.com/originals/04/fa/43/04fa43697705cdbdab9e945be7a3a8c4.jpg" alt="smirkingcat"></div>
-            <div class="grid-item"><img src="https://i.pinimg.com/564x/03/f7/f7/03f7f72584143aa3e99055148abcc3b7.jpg"></div>  
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>  
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item">9</div>  
-            <div class="grid-item">10</div>
-            <div class="grid-item">11</div>
-            <div class="grid-item">12</div>  
+        <div id="Dogs" class="tab">
+            <h3>Dogs to hate on</h3>
+            <p>Peanut and Riley</p>
           </div>
-        -->
+
+        <script>
+        function tab(event, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+            }
+        </script>
 
 
         
