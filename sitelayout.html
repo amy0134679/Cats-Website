@@ -10,12 +10,29 @@
       
         <h1>All about Cats!</h1>
 
-        <div class="navbar">
+        <!-- <div class="navbar">
             <a class="active" href="Cat Gallery">Cat Gallery</a>
             <a href="https://en.wikipedia.org/wiki/Cat">More about Cats</a>
             <button class="tab" onclick="pages(event, 'Dogs To Hate On')">Dogs</button>
             <a href="SUPRISE ME!">I love surprises</a>
+        </div> -->
+        <div class="navbar">
+            <button class="navbar" onclick="openTab(event, 'I love surprises')">Cat Gallery</button>
+            <button class="navbar" onclick="openTab(event, 'Dogs to hate on')">Dogs to Hate on</button>
+            <button class="navbar" onclick="openTab(event, 'I love surprises')">I love Surprises</button>
+            <button class="navbar" onclick="location.href='https://en.wikipedia.org/wiki/Cat';"> More about Cats</button>
+        
         </div>
+        
+                <div id="Dogs to hate on" class="content">
+                    <h3>Peanut and Riley</h3>
+                    <p>These are dogs to hate on</p> 
+                </div>
+
+                <div id="I love surprises" class="content">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+            </div>
         
         <p> Welcome to our photo gallery of cats, where you will find a collection of adorable and fascinating feline portraits. We have photos of cats in different settings, from curled up sleeping in cozy beds to striking poses in the great outdoors. Some of the cats in our gallery are captured mid-play, 
             while others are simply enjoying a quiet moment of contemplation.</p>
@@ -38,29 +55,6 @@
             </div>
 
         </div>
-
-        <div id="Dogs" class="tab">
-            <h3>Dogs to hate on</h3>
-            <p>Peanut and Riley</p>
-          </div>
-
-        <script>
-        function tab(event, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-            }
-        </script>
-
-
         
     </body>
 
