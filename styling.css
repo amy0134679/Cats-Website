@@ -48,10 +48,9 @@ body {
   padding: 15px;
 }
 
-.navbar button {
+.navbar a {
   float: left;
   background-color: bisque;
-  font-family: "Franklin Gothic Extra-Light", "Arial Narrow";
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -59,12 +58,12 @@ body {
   color: #4f370a;
 }
 
-.navbar button:hover {
+.navbar a:hover {
   background-color: #ffd0d1;
   color: #4f370a;
 }
 
-.navbar button.active {
+.navbar a.active {
   background-color: #fec9ca;
   color: #4f370a;
 }
