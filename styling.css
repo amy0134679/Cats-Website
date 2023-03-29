@@ -2,6 +2,27 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+.slides {
+  background-color: #4f370a;
+   padding: 10px 10px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  }
+
+  .slides img {
+  object-fit: contain;
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 300px;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  background-image: url("https://scontent.cdninstagram.com/v/t1.15752-9/337188216_1483359202192128_125901960956712265_n.jpg?stp=dst-jpg_s320x320&_nc_cat=110&ccb=1-7&_nc_sid=5a057b&_nc_ohc=kXS64z01m6sAX-1ell6&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=03_AdSZrtK9w8Il52RsWYWHh5TwdHWpyMbaUhM9YDuh6942Wg&oe=644B1770");
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar {
     background-color: #4f370a;
     overflow: hidden;
@@ -9,14 +30,15 @@ body {
     padding: 15px;
   }
 
-  .navbar button {
+  .navbar button{
     float: left;
-    color: #f2f2f2;
+    background-color: bisque;
     font-family: 'Franklin Gothic Extra-Light', 'Arial Narrow';
     text-align: center;
     padding: 10px;
     text-decoration: none;
     font-size: 20px;
+    color:#4f370a; 
   }
 
   .navbar button:hover {
@@ -29,7 +51,7 @@ body {
     color: #4f370a
   }
 
-.row {
+  .row {
     margin: 35px;
     display: flex;
     flex-wrap: wrap;
@@ -42,14 +64,13 @@ body {
   }
   
   .column img {
-    border: 10px solid, bisque;
     background: #fec9ca;
     padding: 10px 10px;
     margin-top: 10px;
     border-radius: 25px;
   }
 
-h1 {
+  h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
     color: #4f370a;
     font-size: 40px;
@@ -57,7 +78,7 @@ h1 {
     background-color: bisque;
     border: 65px solid, #4f370a;
     padding: 25px;
-}
+  }
 
 p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
