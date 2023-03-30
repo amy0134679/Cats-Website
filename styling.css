@@ -3,7 +3,6 @@ body {
 }
 
 .slides {
-  background-color: #4f370a;
   padding: 5px;
   border-radius: 25px;
   display: flex;
@@ -29,14 +28,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: #fec9ca;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #fec9ca;
-  border-radius: 10px;
-  outline: 1px solid solid;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -51,23 +47,18 @@ body {
 }
 
 .navbar a {
-  float: left;
   background-color: bisque;
+  color: #4f370a;
+  padding: 10px 20px;
   text-align: center;
-  padding: 10px;
   text-decoration: none;
+  display: inline-block;
   font-size: 20px;
-  color: #4f370a;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-.navbar a:hover {
+.navbar a:hover a.active {
   background-color: #ffd0d1;
-  color: #4f370a;
-}
-
-.navbar a.active {
-  background-color: #fec9ca;
-  color: #4f370a;
 }
 
 .row {
