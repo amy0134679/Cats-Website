@@ -1,7 +1,3 @@
-body {
-  background-color: rgb(255, 255, 255);
-}
-
 .slides {
   padding: 5px;
   border-radius: 25px;
@@ -20,14 +16,11 @@ body {
   scroll-behavior: smooth;
   background-image: url("https://scontent.cdninstagram.com/v/t1.15752-9/337188216_1483359202192128_125901960956712265_n.jpg?stp=dst-jpg_s320x320&_nc_cat=110&ccb=1-7&_nc_sid=5a057b&_nc_ohc=kXS64z01m6sAX-1ell6&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=03_AdSZrtK9w8Il52RsWYWHh5TwdHWpyMbaUhM9YDuh6942Wg&oe=644B1770");
   justify-content: center;
+  align-items: center;
 }
 
 ::-webkit-scrollbar {
   width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -56,8 +49,12 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.navbar a:hover a.active {
-  background-color: #ffd0d1;
+.navbar a:hover {
+  background-color: #aa7777;
+}
+
+.navbar a.active {
+  background-color: #fec9ca;
 }
 
 .row {
