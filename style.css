@@ -1,16 +1,18 @@
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  background-color: darkgray;
 }
 
+  
+
 header {
+  background-color: azure;
   padding: 1rem;
 }
 
 header h1 {
+  background-color: azure;
   text-align: center;
 }
 

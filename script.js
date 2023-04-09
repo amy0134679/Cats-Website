@@ -1,5 +1,6 @@
 import { TMDB_API_KEY } from "./key.js";
 
+
 const cartContents = new Set();
 
 const getTMDBData = async (url) => {
@@ -30,17 +31,20 @@ const createMovieTile = (id, poster, title, date, description) => {
     cart.innerHTML = `Your cart contains ${cartContents.size} movies`;
   })
 
-  trailerButton.addEventListener('click', async () => {
-    const trailersData = await getTMDBData(`https://api.themoviedb.org/3//movie/${id}/videos?api_key=${TMDB_API_KEY}&language=en-US&adult=false`);
+  const movies = document.getElementById("movies");
 
-    const trailer = trailersData.results.filter((trailer) => {
-      return trailer.type === "Trailer";
-    });
-
-    !trailer.length
-      ? alert("Sorry! No trailers for this film.")
-      : window.open(`https://www.youtube.com/watch?v=${trailer.at(0).key}`)
-  })
+  (async () => {
+    try {
+      const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
+      
+      // Use fetched movie data to create movie tile
+      const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+      movies.appendChild(tile);
+  
+    } catch (error) {
+      console.error('Error fetching TMDB data:', error);
+    }
+  })();
 
   details.append(h1);
   details.append(h3);
@@ -54,10 +58,40 @@ const createMovieTile = (id, poster, title, date, description) => {
   return tile;
 }
 
-let movieData = await getTMDBData(`https://api.themoviedb.org/3//movie/top_rated?api_key=${TMDB_API_KEY}&language=en-US&adult=false`);
-const movies = document.getElementById("movies");
+const movieID = ["372058", "568160", "4935"];
+console.log(movieID.length);
 
-movieData.results.forEach(movie => {
-  const tile = createMovieTile(movie.id, movie.poster_path, movie.title, movie.release_date, movie.overview);
-  movies.appendChild(tile);
-});
+//  Fetch movie data for each movie ID
+// movieID.forEach(async (id) => {
+//   try {
+//     const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
+    
+//     // Use fetched movie data to create movie tile
+//     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+//     movies.appendChild(tile);
+
+//   } catch (error) {
+//     console.error('Error fetching TMDB data:', error);
+//   }
+// });
+
+// Fetch movie data for each movie ID
+// for (let i = 0; i < movieID.length; i++) {
+//   const id = movieID[i];
+//   try {
+//     const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
+    
+//     // Use fetched movie data to create movie tile
+//     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+//     movies.appendChild(tile);
+
+//   } catch (error) {
+//     console.error('Error fetching TMDB data:', error);
+//   }
+  
+//   // Add a condition to stop the loop after a certain condition is met
+//   if (i > movieID.length) {
+//     break; 
+//   }
+// }
+
