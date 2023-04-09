@@ -58,7 +58,7 @@ const createMovieTile = (id, poster, title, date, description) => {
   return tile;
 }
 
-const movieID = ["372058", "568160", "4935"];
+const movieID = ["372058", "568160", "4935","378064","530079","12477","10494","504253","92321","198375"];
 console.log(movieID.length);
 
 //  Fetch movie data for each movie ID
@@ -75,23 +75,21 @@ console.log(movieID.length);
 //   }
 // });
 
-// Fetch movie data for each movie ID
-// for (let i = 0; i < movieID.length; i++) {
-//   const id = movieID[i];
-//   try {
-//     const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
+for (let i = 0; i < movieID.length; i++) {
+  const id = movieID[i];
+  try {
+    const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
     
-//     // Use fetched movie data to create movie tile
-//     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
-//     movies.appendChild(tile);
+    // Use fetched movie data to create movie tile
+    const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+    movies.appendChild(tile);
 
-//   } catch (error) {
-//     console.error('Error fetching TMDB data:', error);
-//   }
+  } catch (error) {
+    console.error('Error fetching TMDB data:', error);
+  }
   
-//   // Add a condition to stop the loop after a certain condition is met
-//   if (i > movieID.length) {
-//     break; 
-//   }
-// }
-
+  // Add a condition to stop the loop after a certain condition is met
+  if (i > movieID.length) {
+    break; 
+  }
+}
