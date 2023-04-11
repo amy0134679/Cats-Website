@@ -1,6 +1,5 @@
 import { TMDB_API_KEY } from "./key.js";
 
-
 const cartContents = new Set();
 
 const getTMDBData = async (url) => {
@@ -33,19 +32,6 @@ const createMovieTile = (id, poster, title, date, description) => {
 
   const movies = document.getElementById("movies");
 
-  (async () => {
-    try {
-      const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
-      
-      // Use fetched movie data to create movie tile
-      const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
-      movies.appendChild(tile);
-  
-    } catch (error) {
-      console.error('Error fetching TMDB data:', error);
-    }
-  })();
-
   details.append(h1);
   details.append(h3);
   details.append(h4);
@@ -58,16 +44,17 @@ const createMovieTile = (id, poster, title, date, description) => {
   return tile;
 }
 
-const movieIDs = ["568160", "4935", "378064", "530079", "12477", "10494", "504253", "92321", "198375", "372058"];
+const movieID = ["568160", "4935", "378064", "530079", "12477", "10494", "504253", "92321", "198375", "372058"];
 
-// Create an array of promises for each getTMDBData call
-const movieDataPromises = movieIDs.map(id => getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`));
+movieID.forEach(async (id) => {
+  try {
+    const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
+    
+    // Use fetched movie data to create movie tile
+    const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+    movies.appendChild(tile);
 
-// Wait for all promises to resolve
-const movieDataArray = await Promise.all(movieDataPromises);
-
-// Loop through the resolved movieDataArray and create movie tiles
-movieDataArray.forEach(movieData => {
-  const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
-  movies.appendChild(tile);
+  } catch (error) {
+    console.error('Error fetching TMDB data:', error);
+  }
 });
