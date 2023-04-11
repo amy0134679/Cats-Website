@@ -58,38 +58,16 @@ const createMovieTile = (id, poster, title, date, description) => {
   return tile;
 }
 
-const movieID = ["372058", "568160", "4935","378064","530079","12477","10494","504253","92321","198375"];
-console.log(movieID.length);
+const movieIDs = ["568160", "4935", "378064", "530079", "12477", "10494", "504253", "92321", "198375", "372058"];
 
-//  Fetch movie data for each movie ID
-// movieID.forEach(async (id) => {
-//   try {
-//     const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
-    
-//     // Use fetched movie data to create movie tile
-//     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
-//     movies.appendChild(tile);
+// Create an array of promises for each getTMDBData call
+const movieDataPromises = movieIDs.map(id => getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`));
 
-//   } catch (error) {
-//     console.error('Error fetching TMDB data:', error);
-//   }
-// });
+// Wait for all promises to resolve
+const movieDataArray = await Promise.all(movieDataPromises);
 
-for (let i = 0; i < movieID.length; i++) {
-  const id = movieID[i];
-  try {
-    const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
-    
-    // Use fetched movie data to create movie tile
-    const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
-    movies.appendChild(tile);
-
-  } catch (error) {
-    console.error('Error fetching TMDB data:', error);
-  }
-  
-  // Add a condition to stop the loop after a certain condition is met
-  if (i > movieID.length) {
-    break; 
-  }
-}
+// Loop through the resolved movieDataArray and create movie tiles
+movieDataArray.forEach(movieData => {
+  const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+  movies.appendChild(tile);
+});

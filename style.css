@@ -2,18 +2,28 @@
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
+    background-color: #363062;
 }
 
   
 
 header {
-  background-color: azure;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 header h1 {
-  background-color: azure;
-  text-align: center;
+text-shadow: 5px 5px #827397;
+filter: drop-shadow(-10px 10px 20px #827397);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 40px;
+margin: 0px auto;
+font-weight: bold;
+line-height: 5.8rem;
+text-align: left;
+color: #D8B9C3;
+background-color: #4D4C7D;
+text-align: center;
+padding: 2rem;
 }
 
 #movies {
@@ -28,18 +38,20 @@ header h1 {
   padding: 1rem;
   margin-bottom: 1rem;
   gap: 2rem;
-  border-style: solid;
-  border-radius: 1rem;
-  border-color: crimson;
+  border-style: outset;
+  border-radius: 3rem;
+  border-color: #F0DBDB;
 }
 
 img {
-  width: 200px;
+height: 50%;
+width: 50%;
+
 }
 
 button {
   border-radius: 0.5rem;
-  background-color: red;
+  background-color: #DBA39A;
   color: white;
   padding: 0.5rem;
   align-self: end;
