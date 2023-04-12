@@ -4,7 +4,7 @@ const cartContents = new Set();
 
 const getTMDBData = async (url) => {
   return (await axios.get(url)).data;
-}
+};
 
 const createMovieTile = (id, poster, title, date, description) => {
   const tile = document.createElement("div");
@@ -33,25 +33,38 @@ const createMovieTile = (id, poster, title, date, description) => {
   tile.append(trailerButton);
 
   return tile;
-}
+};
 
-const movieID = ["568160", "4935", "378064", "530079", "12477", "10494", "504253", "92321", "198375", "372058"];
+// const movieID = ["568160", "4935", "378064", "530079", "12477", "10494", "504253", "92321", "198375", "372058"];
 
-movieID.forEach(async (id) => {
-    const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
-    
-    const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
-    movies.appendChild(tile);
+// movieID.forEach(async (id) => {
+//     const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
 
-});
+//     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
+//     movies.appendChild(tile);
+
+// });
 
 // Add event listener to the button
-document.getElementById('getInfo').addEventListener('click', function() {
-  // Get the selected value from the selector
-  const selectedValue = document.getElementById('moviePicker').value;
-  
-  // Log the selected value to the console
-  console.log('Selected movie:', selectedValue);
+document.getElementById("getInfo").addEventListener("click", function () {
+  const selectedValue = document.getElementById("moviePicker").value;
+  console.log("Selected movie:", selectedValue);
+
+  let selectedInfo = getTMDBData(
+    `https://api.themoviedb.org/3//movie/${selectedValue}?api_key=${TMDB_API_KEY}&language=en-US`
+  );
+  const movies = document.getElementById("movies");
+
+  selectedInfo.then(console.log);
+
+  function showInfo(selectedInfo) {
+    const tile = createMovieTile(
+      movie.id,
+      movie.poster_path,
+      movie.title,
+      movie.release_date,
+      movie.overview
+    );
+    movies.appendChild(tile);
+  }
 });
-
-
