@@ -46,25 +46,37 @@ const createMovieTile = (id, poster, title, date, description) => {
 // });
 
 // Add event listener to the button
-document.getElementById("getInfo").addEventListener("click", function () {
+
+
+
+async function bFunction() {
   const selectedValue = document.getElementById("moviePicker").value;
-  console.log("Selected movie:", selectedValue);
+  console.log(selectedValue);
+  let selectedInfo = await getTMDBData(
+    `https://api.themoviedb.org/3/movie/${selectedValue}?api_key=${TMDB_API_KEY}&language=en-US&adult=false`);
+  console.log();
+  return selectedInfo;
+}
 
-  let selectedInfo = getTMDBData(
-    `https://api.themoviedb.org/3//movie/${selectedValue}?api_key=${TMDB_API_KEY}&language=en-US`
+function showInfo(movie) {
+  console.log(`ID: ${movie.id} + poster path: ${movie.poster_path}`);
+  const tile = createMovieTile(
+    movie.id,
+    movie.poster_path,
+    movie.title,
+    movie.release_date,
+    movie.overview
   );
+  movies.appendChild(tile);
+}
+
+document.getElementById("getInfo").addEventListener("click", function () {
+  // const selectedValue = document.getElementById("moviePicker").value;
+  // console.log("Selected movie:", selectedValue);
+
+  // let selectedInfo = await getTMDBData(
+  //   `https://api.themoviedb.org/3/movie/${aFunction()}?api_key=${TMDB_API_KEY}&append_to_response=videos`  );
   const movies = document.getElementById("movies");
-
-  selectedInfo.then(console.log);
-
-  function showInfo(selectedInfo) {
-    const tile = createMovieTile(
-      movie.id,
-      movie.poster_path,
-      movie.title,
-      movie.release_date,
-      movie.overview
-    );
-    movies.appendChild(tile);
-  }
+  let ab = bFunction();
+  showInfo(ab);
 });
