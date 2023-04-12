@@ -43,5 +43,19 @@ movieID.forEach(async (id) => {
     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
     movies.appendChild(tile);
 
-
 });
+
+document.getElementById('getButton').addEventListener('click', myFunc);
+
+function myFunc() {
+  var selectElement = document.getElementById('moviePicker');
+  var output = selectElement.value;
+  console.log(output);
+
+}
+
+
+
+
+
+
