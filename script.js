@@ -45,17 +45,13 @@ movieID.forEach(async (id) => {
 
 });
 
-document.getElementById('getButton').addEventListener('click', myFunc);
-
-function myFunc() {
-  var selectElement = document.getElementById('moviePicker');
-  var output = selectElement.value;
-  console.log(output);
-
-}
-
-
-
-
+// Add event listener to the button
+document.getElementById('getInfo').addEventListener('click', function() {
+  // Get the selected value from the selector
+  const selectedValue = document.getElementById('moviePicker').value;
+  
+  // Log the selected value to the console
+  console.log('Selected movie:', selectedValue);
+});
 
 
