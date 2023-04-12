@@ -13,7 +13,6 @@ const createMovieTile = (id, poster, title, date, description) => {
   const h1 = document.createElement("h1");
   const h3 = document.createElement("h3");
   const h4 = document.createElement("h4");
-  const buyButton = document.createElement("button");
   const trailerButton = document.createElement("button");
 
   tile.classList.add("tile");
@@ -21,14 +20,7 @@ const createMovieTile = (id, poster, title, date, description) => {
   h1.innerText = title;
   h3.innerText = date;
   h4.innerText = description;
-  buyButton.innerText = "Buy";
   trailerButton.innerText = "Trailer";
-
-  buyButton.addEventListener('click', () => {
-    cartContents.add(id);
-    const cart = document.getElementById("cart");
-    cart.innerHTML = `Your cart contains ${cartContents.size} movies`;
-  })
 
   const movies = document.getElementById("movies");
 
@@ -38,7 +30,6 @@ const createMovieTile = (id, poster, title, date, description) => {
 
   tile.append(img);
   tile.append(details);
-  tile.append(buyButton);
   tile.append(trailerButton);
 
   return tile;
@@ -47,14 +38,10 @@ const createMovieTile = (id, poster, title, date, description) => {
 const movieID = ["568160", "4935", "378064", "530079", "12477", "10494", "504253", "92321", "198375", "372058"];
 
 movieID.forEach(async (id) => {
-  try {
     const movieData = await getTMDBData(`https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`);
     
-    // Use fetched movie data to create movie tile
     const tile = createMovieTile(movieData.id, movieData.poster_path, movieData.title, movieData.release_date, movieData.overview);
     movies.appendChild(tile);
 
-  } catch (error) {
-    console.error('Error fetching TMDB data:', error);
-  }
+
 });

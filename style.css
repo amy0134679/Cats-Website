@@ -2,27 +2,27 @@
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
-    background-color: #363062;
+  background-color: white;
 }
-
-  
 
 header {
   padding: 2rem;
 }
 
 header h1 {
+background-color: #4D4C7D;
 text-shadow: 5px 5px #827397;
 filter: drop-shadow(-10px 10px 20px #827397);
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-padding: 40px;
+padding: 50px;
 margin: 0px auto;
 font-weight: bold;
-line-height: 5.8rem;
+line-height: 1 rem;
 text-align: left;
 color: #D8B9C3;
-background-color: #4D4C7D;
-text-align: center;
+
+text-align: left;
+font-size: 50px;
 padding: 2rem;
 }
 
@@ -39,14 +39,12 @@ padding: 2rem;
   margin-bottom: 1rem;
   gap: 2rem;
   border-style: outset;
-  border-radius: 3rem;
+  border-radius: 1rem;
   border-color: #F0DBDB;
 }
 
 img {
-height: 50%;
-width: 50%;
-
+  width: 300px;
 }
 
 button {
@@ -55,4 +53,9 @@ button {
   color: white;
   padding: 0.5rem;
   align-self: end;
+}
+
+.select {
+background-color: #4D4C7D;
+
 }

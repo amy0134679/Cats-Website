@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie Library</title>
-  <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+    />
+  </head>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-</head>
+  <body>
+    <header>
+      <h1>ANIME MOVIES <br />TO NUMB THE PAIN</h1>
+    </header>
 
-<body>
-  <header>
-    <h1>ANIME MOVIES TO NUMB THE PAIN</h1>
-    <h2 id="cart">Your cart contains 0 movies</h2>
-  </header>
-  <div id="movies">
-  </div>
-  <script type="module" src="script.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-</body>
+    <div class="select">
+      <label for="selector">Select a Movie!:</label>
+    <select name="moviePicker" id="moviePicker">
+      <option value="378064">A Silent Voice</option>
+      <option value="12477">Grave of Fireflies</option>
+      <option value="530079">Ride Your Wave</option>
+      <option value="372058">Your Name.</option>
+      <option value="10494">Perfect Blue</option>
+      <option value="198375">The Garden of Words</option>
+      <option value="504253">I Want to Eat Your Pancreas</option>
+      <option value="92321">Into the Forest of Firefly Light</option>
+      <option value="4935">Howl's Moving Castle</option>
+      <option value="568160">Weathering With You</option>
+    </select></div>
 
+    <div id="movies"></div>
+  
+    </div>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </body>
 </html>
