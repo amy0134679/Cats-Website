@@ -6,7 +6,7 @@
   margin: 3rem;
 }
 
-header {
+header .select {
   padding: 2rem;
 }
 
@@ -41,5 +41,19 @@ button {
 }
 
 .select {
-  background-color: DodgerBlue;
+  background-color: #827397;
+  padding: 2rem;
+  padding: 50px;
+  margin: 0px auto;
+  font-weight: bold;
+  line-height: 1 rem;
+  text-align: left;
+  color: #d8b9c3;
+  text-align: left;
+  font-size: 50px;
+  padding: 2rem;
+}
+
+.movieInfo {
+  background-color: #4d4c7d;
 }
