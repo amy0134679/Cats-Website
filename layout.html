@@ -1,43 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Library</title>
-    <link rel="stylesheet" href="style.css" />
-
-    <link
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <header>
-      <h1>ANIME MOVIES <br />TO NUMB THE PAIN</h1>
-    </header>
-
-    <div class="select">
-      <label for="selector">Select a Movie!:</label>
-      <select name="moviePicker" id="moviePicker">
-        <option value="378064">A Silent Voice</option>
-        <option value="12477">Grave of Fireflies</option>
-        <option value="530079">Ride Your Wave</option>
-        <option value="372058">Your Name.</option>
-        <option value="10494">Perfect Blue</option>
-        <option value="198375">The Garden of Words</option>
-        <option value="504253">I Want to Eat Your Pancreas</option>
-        <option value="92321">Into the Forest of Firefly Light</option>
-        <option value="4935">Howl's Moving Castle</option>
-        <option value="568160">Weathering With You</option>
-      </select>
-      <button type="button" id="getInfo">GET!</button>
-    </div>
-
-    <div id="movies"></div>
+<html>
+<head>
   
-    </div>
-    <script type="module" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-  </body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <title>Anime Movies <br> To Numb The Pain</title>
+  <div class="select">
+    <label for="moviePicker">Select a Movie!:</label>
+    <select name="moviePicker" id="moviePicker">
+      <option value="378064">A Silent Voice</option>
+      <option value="12477">Grave of Fireflies</option>
+      <option value="530079">Ride Your Wave</option>
+      <option value="372058">Your Name.</option>
+      <option value="10494">Perfect Blue</option>
+      <option value="198375">The Garden of Words</option>
+      <option value="504253">I Want to Eat Your Pancreas</option>
+      <option value="92321">Into the Forest of Firefly Light</option>
+      <option value="4935">Howl's Moving Castle</option>
+      <option value="568160">Weathering With You</option>
+    </select>
+    <button type="button" id="getInfo">GET</button>
+  </div>
+  <div id="movieInfo">
+    <h2 id="movieTitle"></h2>
+    <p id="movieYear"></p>
+    <img id="moviePoster" src="" alt="Movie Poster">
+    <p id="movieOverview"></p>
+  </div>
+</body>
+<script type="module" src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </html>
