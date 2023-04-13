@@ -1,6 +1,6 @@
 import {TMDB_API_KEY} from "./key.js";
 
-    const getMovieInfo = async (movieId) => {
+const getMovieInfo = async (movieId) => {
         const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}`);
         const movie = response.data;
         document.getElementById('movieTitle').textContent = movie.title;  
@@ -13,7 +13,21 @@ import {TMDB_API_KEY} from "./key.js";
         document.getElementById('rating').textContent = `Average Rating: ${movie.vote_average}`;
         document.getElementById('movieOverview').textContent = movie.overview;
         document.getElementById('moviePoster').src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-      
 
     }
 
+    document.getElementById('getInfo').addEventListener('click', () => {
+      const movieId = document.getElementById('moviePicker').value;
+      getMovieInfo(movieId);
+    });
+
+
+
+
+
+
+
+
+
+
+ 
