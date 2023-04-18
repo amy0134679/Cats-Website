@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Movie Library</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header><h1>Anime Movies <br> To Numb The Pain</h1></header>>
-  <div class="select">
-    <label for="moviePicker">Select a Movie!:</label>
-    <select name="moviePicker" id="moviePicker">
-      <option value="378064">A Silent Voice</option>
-      <option value="12477">Grave of Fireflies</option>
-      <option value="530079">Ride Your Wave</option>
-      <option value="372058">Your Name.</option>
-      <option value="10494">Perfect Blue</option>
-      <option value="198375">The Garden of Words</option>
-      <option value="504253">I Want to Eat Your Pancreas</option>
-      <option value="92321">Into the Forest of Firefly Light</option>
-      <option value="4935">Howl's Moving Castle</option>
-      <option value="568160">Weathering With You</option>
-    </select>
-    <button type="button" id="getInfo">GET</button>
-    
-  </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Anime Movies <br />
+        To Numb The Pain
+      </h1>
+    </header>
 
-  <div id="movieInfo">
-    <h2 id="movieTitle"></h2>
-    <h3 id="movieYear"></h3>
-    <h3 id="ogTitle"><h3>
-    <p id="ogCountry"></p>
-    <p id="ogLang"></p>
-    <p id="runtime"></p> 
-    <p id="budget"></p>
-    <p id="rating"></p>
-    <p id="movieOverview"></p>
-    <img id="moviePoster" src="" alt="Movie Poster">
-    <iframe id="movieTrailer" src=""></iframe>
-  </div>
-</body>
-<script type="module" src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <div class="select column side row">
+      <label for="moviePicker">Select a Movie!:</label>
+      <select name="moviePicker" id="moviePicker">
+        <option value="378064">A Silent Voice</option>
+        <option value="12477">Grave of Fireflies</option>
+        <option value="530079">Ride Your Wave</option>
+        <option value="372058">Your Name.</option>
+        <option value="10494">Perfect Blue</option>
+        <option value="198375">The Garden of Words</option>
+        <option value="504253">I Want to Eat Your Pancreas</option>
+        <option value="92321">Into the Forest of Firefly Light</option>
+        <option value="4935">Howl's Moving Castle</option>
+        <option value="568160">Weathering With You</option>
+      </select>
+      <button type="button" id="getInfo">GET</button>
+    </div>
+
+    <div class="column main row" id="movieInfo">
+      <h2 id="movieTitle"></h2>
+      <h3 id="movieYear"></h3>
+      <h3 id="ogTitle"></h3>
+      <p id="ogCountry"></p>
+      <p id="ogLang"></p>
+      <p id="runtime"></p>
+      <p id="budget"></p>
+      <p id="rating"></p>
+      <p id="movieOverview"></p>
+      <img id="moviePoster" src="" alt="Movie Poster" />
+      <iframe id="movieTrailer" src=""></iframe>
+    </div>
+  </body>
+  <script type="module" src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </html>
