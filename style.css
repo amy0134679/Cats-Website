@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  background-color: #2c3e50;
+  background-color: rgba(252, 210, 235,.75);
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -19,7 +19,7 @@ header h1 {
 
 
 label {
-  color: white;
+  color: rgb(87, 88, 139);
   margin-right: 10px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -41,8 +41,8 @@ button {
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: rgb(87, 88, 139);
+  color: white;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -54,6 +54,8 @@ button {
 }
 
 .basicInfo {
+  font-size: 30px;
+  text-align: center;
   color: white;
   padding: 20px;
   border-radius: 5px;
@@ -62,7 +64,7 @@ button {
 }
 
 #moviePoster {
-  width: 50%;
+  width: 40%;
   max-width: 400px;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -72,7 +74,7 @@ button {
 
 #movieTrailer {
   width: 50%;
-  height: 600px;
+  height: 500px;
   margin-top: 10px;
   border: none;
   border-radius: 5px;
