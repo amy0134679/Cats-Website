@@ -1,5 +1,5 @@
 body {
-  background-color: #f7f7f7;
+  background-image: url("https://images8.alphacoders.com/749/749455.png");
   font-family: Arial, sans-serif;
 }
 
@@ -17,26 +17,23 @@ header h1 {
   letter-spacing: 1px;
 }
 
-.select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
 label {
+  color: white;
   margin-right: 10px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-select {
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
   padding: 8px;
   font-size: 1rem;
-  border: 2px solid #2c3e50;
   border-radius: 5px;
   background-color: #fff;
-  color: #333;
 }
 
 button {
@@ -57,11 +54,11 @@ button {
 }
 
 .basicInfo {
-  justify-content: center;
-  background-color: #f4f0f0;
+  color: white;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(252, 210, 235,.25);
 }
 
 #moviePoster {
@@ -81,13 +78,13 @@ button {
   border-radius: 5px;
 }
 
-
-
 #movieInfo {
-  background-color: #fff;
+  color: white;
+  justify-content: center;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(252, 210, 235,.25);
 }
 
 #movieYear {

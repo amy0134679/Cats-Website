@@ -19,7 +19,7 @@ const getMovieInfo = async (movieId) => {
     "ogCountry"
   ).textContent = `Origin Country: ${movie.origin_country}`;
   document.getElementById("runtime").textContent = `Duration: ${movie.runtime}`;
-  document.getElementById("budget").textContent = `Budget: ${movie.budget}`;
+  document.getElementById("budget").textContent = `Budget: $${movie.budget}`;
   document.getElementById(
     "rating"
   ).textContent = `Average Rating: ${movie.vote_average}`;
