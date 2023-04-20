@@ -50,6 +50,11 @@ button {
   cursor: pointer;
   filter: drop-shadow(-10px 10px 20px #827397);
 }
+button:hover {
+  background-color: #dba4b5;
+  color: white;
+  filter: drop-shadow(-10px 10px 10px #827397);
+}
 
 .grid-container {
   display: grid;
@@ -105,10 +110,19 @@ button {
 
 #moviePicker {
   border-radius: 15px;
+  border-color: rgba(0, 0, 0, 0);
   padding: 1rem;
   font-size: 1.5rem;
   background-color: #4d4c7d;
   color: #d8b9c3;
   filter: drop-shadow(-10px 10px 20px #827397);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#moviePicker:hover{
+  filter: drop-shadow(-10px 10px 10px #827397);
+}
+
+#moviePicker div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
