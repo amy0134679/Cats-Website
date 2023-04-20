@@ -18,8 +18,12 @@ const getMovieInfo = async (movieId) => {
   document.getElementById(
     "ogCountry"
   ).textContent = `Origin Country: ${movie.origin_country}`;
-  document.getElementById("runtime").textContent = `Duration: ${movie.runtime}`;
-  document.getElementById("budget").textContent = `Budget: $${movie.budget}`;
+  document.getElementById(
+    "runtime"
+  ).textContent = `Duration: ${movie.runtime} minutes`;
+  document.getElementById(
+    "status"
+  ).textContent = `Movie Status: ${movie.status}`;
   document.getElementById(
     "rating"
   ).textContent = `Average Rating: ${movie.vote_average}`;
@@ -27,7 +31,6 @@ const getMovieInfo = async (movieId) => {
   document.getElementById(
     "moviePoster"
   ).src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-  // const trailers = response.data.videos.results.filter((trailer) => trailer.type === "Trailer");
   const trailer = movie.videos.results.filter((trailer) => {
     return trailer.type === "Trailer";
   });
