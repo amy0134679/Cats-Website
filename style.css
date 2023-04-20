@@ -119,10 +119,8 @@ button:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#moviePicker:hover{
+option:hover{
   filter: drop-shadow(-10px 10px 10px #827397);
+  background-color: black;
 }
-
-#moviePicker div:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
+s
